@@ -1,0 +1,31 @@
+<template>
+    <div @click="push">
+        <slot />
+    </div>
+</template>
+  
+<script lang="ts">
+import { defineComponent } from 'vue';
+import { useRouter } from 'vue-router';
+
+export default defineComponent({
+    props: {
+        to: {
+            type: String,
+            required: true
+        }
+    },
+    setup(props) {
+        const router = useRouter();
+        const push = () => {
+            router.push(props.to).catch(err => {
+                console.log(err);
+            });
+        };
+        return {
+            push
+        };
+    }
+});
+</script>
+  
