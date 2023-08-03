@@ -10,14 +10,13 @@ import "~/styles/index.scss";
 import "uno.css";
 
 import "element-plus/theme-chalk/src/message.scss";
-
 import zhCn from 'element-plus/dist/locale/zh-cn.mjs'
 
-const app = createApp(App)
-
-app.use(ElementPlus,{
+const app = createApp(App,{
     locale: zhCn,
-})
+  })
+
+app.use(ElementPlus)
 app.use(createPinia())
 app.use(router)
 

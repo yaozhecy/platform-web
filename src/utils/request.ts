@@ -21,6 +21,7 @@ service.interceptors.request.use(
 // 响应拦截器
 service.interceptors.response.use(
     (response: AxiosResponse) => {
+        alert(response.data)
         const { code, msg } = response.data;
         if (code === '00000') {
             return response.data;
