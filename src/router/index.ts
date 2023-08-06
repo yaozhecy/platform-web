@@ -10,6 +10,22 @@ const router = createRouter({
       component: HomeView
     },
     {
+      path: '/codegeneration',
+      name: 'codegeneration',
+      redirect: '/codegeneration/project',
+      children:[
+        {
+          path: 'project',
+          name: 'cg_project',
+          component: () => import('../views/codegeneration/TableInfo.vue')
+        },{
+          path: 'template',
+          name: 'cg_template',
+          component: () => import('../views/codegeneration/TemplateInfo.vue')
+        }
+      ]
+    },
+    {
       path: '/about',
       name: 'about',
       component: () => import('../views/AboutView.vue')

@@ -5,7 +5,7 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
-import {getUserInfo} from '@/api/manage/index.ts'
+import {getUserInfo} from '@/api/manage/index'
 
 const value = ref(new Date())
 

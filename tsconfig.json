@@ -1,5 +1,8 @@
 {
   "files": [],
+  "compilerOptions": {
+    "noImplicitThis": false, // 不允许this有隐式的any类型
+  },
   "references": [
     {
       "path": "./tsconfig.node.json"
