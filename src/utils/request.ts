@@ -1,4 +1,4 @@
-import axios, { type AxiosRequestConfig, type AxiosResponse } from 'axios';
+import axios, { type InternalAxiosRequestConfig, type AxiosResponse } from 'axios';
 import { ElMessage, ElMessageBox } from 'element-plus'
 
 // 创建 axios 实例
@@ -10,7 +10,7 @@ const service = axios.create({
 
 // 请求拦截器
 service.interceptors.request.use(
-    (config: AxiosRequestConfig) => {
+    (config: InternalAxiosRequestConfig) => {
         return config;
     },
     (error: any) => {
