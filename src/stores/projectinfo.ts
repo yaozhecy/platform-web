@@ -1,5 +1,6 @@
 // stores/counter.js
 import { defineStore } from 'pinia'
+import { getUserInfo } from '@/api/manage/index'
 
 export const projectInfoStore = defineStore('projectInfo', {
   state: () => ({
@@ -42,6 +43,6 @@ export const projectInfoStore = defineStore('projectInfo', {
   actions: {
     setData(data: any) {
       this.tableData = data
-    },
+    }
   },
 })
