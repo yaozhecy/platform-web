@@ -1,5 +1,4 @@
 <template>
-    <div>{{ count }}</div>
     <el-container>
         <el-header class="demo-form-inline">
             <el-text tag="b" size="large" style="margin-right: 5px;margin-left: 10px;">关键字:</el-text>

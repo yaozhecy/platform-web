@@ -23,6 +23,11 @@ const router = createRouter({
           name: 'cg_template',
           component: () => import('../views/codegeneration/TemplateInfo.vue')
         }
+        ,{
+          path: 'datasource',
+          name: 'cg_datasource',
+          component: () => import('../views/codegeneration/datasource/index.vue')
+        }
       ]
     },
     {

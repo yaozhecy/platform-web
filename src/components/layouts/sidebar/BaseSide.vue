@@ -13,6 +13,10 @@
         <el-icon><Memo /></el-icon>
         常用模版
       </el-menu-item>
+      <el-menu-item index="/codegeneration/datasource">
+        <el-icon><Memo /></el-icon>
+        数据源管理
+      </el-menu-item>
     </el-sub-menu>
 
     <el-menu-item index="about">
