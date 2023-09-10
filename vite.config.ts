@@ -28,7 +28,7 @@ export default defineConfig({
       // allow auto load markdown components under `./src/components/`
       extensions: ['vue', 'md'],
       // allow auto import and register components used in markdown
-      include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
+      include: [/\.vue$/, /\.vue\?vue/, /\.md$/, /\.ts$/],
       resolvers: [
         ElementPlusResolver({
           importStyle: 'sass',
@@ -67,7 +67,13 @@ export default defineConfig({
         changeOrigin: true,
         rewrite: path =>
           path.replace(new RegExp('^/dev-api'), '')
-      }
+      },
+      '/code-api': {
+        target: 'http://localhost:6234',
+        changeOrigin: true,
+        rewrite: path =>
+          path.replace(new RegExp('^/code-api'), '/codegeneration')
+      },
     }
   },
   resolve: {
