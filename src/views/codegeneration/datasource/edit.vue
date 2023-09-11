@@ -10,10 +10,13 @@
         </el-form-item>
         <div v-if="db_source === 'mysql'">
             <el-form-item label="数据源地址">
+                <el-input v-model="form.name" />
             </el-form-item>
             <el-form-item label="数据库账户">
+                <el-input v-model="form.name" />
             </el-form-item>
             <el-form-item label="数据库密码">
+                <el-input v-model="form.name" />
             </el-form-item>
         </div>
         <div v-else>
@@ -27,7 +30,6 @@
   
 <script lang="ts" setup>
 import { ref, reactive } from 'vue'
-
 import type { UploadProps, UploadUserFile } from 'element-plus'
 
 const db_source = ref('mysql')

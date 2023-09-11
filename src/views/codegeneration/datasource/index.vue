@@ -1,6 +1,7 @@
 <template>
     <el-row class="mb-4">
-        <el-button type="success" @click="queryDataSource">新增</el-button>
+        <el-button type="warning" @click="queryDataSource">查询</el-button>
+        <el-button type="success" @click="state.dialogFormVisible=true">新增</el-button>
     </el-row>
     <el-table :data="state.records" stripe style="width: 100%" height="600">
         <el-table-column fixed prop="fileId" label="文件ID" width="180" />
